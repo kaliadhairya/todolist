@@ -1,0 +1,143 @@
+/* Base Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #e9ecef;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    max-width: 100%;
+}
+
+h1 {
+    text-align: center;
+    color: #343a40;
+    font-size: 26px;
+    margin-bottom: 25px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+label {
+    font-weight: 500;
+    color: #495057;
+}
+
+input, button {
+    padding: 14px;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+input {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input:focus {
+    border-color: #80bdff;
+    outline: none;
+}
+
+button {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 30px;
+    max-height: 300px; /* Limit height to avoid overflow */
+    overflow-y: auto; /* Add scrollbar if needed */
+    border-top: 1px solid #ced4da;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f8f9fa;
+    padding: 12px 20px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border-left: 5px solid #007bff;
+    transition: background 0.3s ease;
+    overflow: hidden; /* Prevent horizontal overflow */
+}
+
+li:hover {
+    background: #e9ecef;
+}
+
+li button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #dc3545;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+li button:hover {
+    color: #c82333;
+    transform: scale(1.1);
+}
+
+.expired {
+    background-color: #f8d7da !important;
+    border-left-color: #dc3545 !important;
+}
+
+.task-name-input,
+.task-deadline-input {
+    width: calc(50% - 10px); /* Adjusted for better responsiveness */
+}
+
+.task-status {
+    font-weight: bold;
+    color: #dc3545;
+    margin-left: 10px;
+}
+
+.task-name,
+.task-name input {
+    flex: 1;
+    color: #343a40;
+}
+
+.task-name input {
+    width: 100%; /* Adjust input width */
+    box-sizing: border-box;
+}
+
+.task-times,
+.task-times input {
+    flex: 1;
+    text-align: right;
+    color: #6c757d;
+    font-size: 14px;
+    box-sizing: border-box;
+}
